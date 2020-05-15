@@ -1,0 +1,32 @@
+[
+    {
+        "itemID": "1",
+        "itemName": "coke",
+        "price": 30,
+        "amount": 5
+    },
+    {
+        "itemID": "2",
+        "itemName": "soda",
+        "price": 35,
+        "amount": 5
+    },
+    {
+        "itemID": "3",
+        "itemName": "green tea",
+        "price": 20,
+        "amount": 5
+    },
+    {
+        "itemID": "4",
+        "itemName": "milk tea",
+        "price": 17,
+        "amount": 7
+    },
+    {
+        "itemID": "5",
+        "itemName": "black tea",
+        "price": 23,
+        "amount": 11
+    }
+]
