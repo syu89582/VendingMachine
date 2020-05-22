@@ -27,7 +27,7 @@ def main():
                 print("sum:", vm.get_money())
         elif cmd == "buy":
             # show available items
-            vm.show_items(sum)
+            vm.show_items(vm.get_money())
             #
             print("quit:q")
             itemID = input("itemID:")
