@@ -9,6 +9,8 @@ def main():
     vm = VendingMachine(items)
     while True:
         # show all items
+        vm.show_items(0)
+        #
         cmd = input("command:pay, buy, refund\n")
         print("sum", vm.get_money())
 
@@ -25,6 +27,8 @@ def main():
                 print("sum:", vm.get_money())
         elif cmd == "buy":
             # show available items
+            vm.show_items(sum)
+            #
             print("quit:q")
             itemID = input("itemID:")
             if itemID == "q":
@@ -35,6 +39,8 @@ def main():
             print(vm.refund())
         elif cmd == "admin":
             # show all items
+            vm.show_items(0)
+            #
             itemID = input("product itemID:")
             key = input("attribute of the product:")
             value = input("value of the attribute:")

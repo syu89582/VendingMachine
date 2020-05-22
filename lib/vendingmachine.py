@@ -4,7 +4,19 @@ class VendingMachine():
         self.items = items
         self.coin = [100, 50, 10, 5, 1]
         self.payment = 0
-
+    #    
+    def show_items(self, price):
+        if price == 0:
+          print("No\tItem\tPrice\t\n")
+          for item in self.items:
+            print('%s %10s %d' % (item["itemID"], item["itemName"], item["price"]))
+        else:
+          print("Items you can buy \n")
+          for item in self.items:
+            if price >= item['price']:
+              print('%s %10s %d' % (item["itemID"], item["itemName"], item["price"]))
+    #    
+    
     def refund(self):
         refund_coin = {}
         for c in self.coin:
