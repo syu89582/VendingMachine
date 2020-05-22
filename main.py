@@ -9,18 +9,17 @@ def main():
     vm = VendingMachine(items)
     while True:
         # show all items
-        cmd = input("command:pay, buy, refund\n")
+        cmd = input("command:pay, buy, refund")
         print("sum", vm.get_money())
 
         if cmd == "pay":
             while True:
-                print("coin type:1, 5, 10, 50, 100\n")
-                print("quit:q\n")
+                print("coin type:1, 5, 10, 50, 100")
+                print("quit:q")
                 coin = input("coin:")
                 if coin == "q":
                     break
-
-                if not vm.insert_coin(coin):
+                if not vm.insert_coin(int(coin)):
                     print("wrong coin type")
                 print("sum:", vm.get_money())
         elif cmd == "buy":
