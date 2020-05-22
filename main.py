@@ -8,8 +8,10 @@ def main():
 
     vm = VendingMachine(items)
     while True:
-        # show all items
-        cmd = input("command:pay, buy, refund")
+       # show all items
+        vm.show_items()
+        #
+        cmd = input("command:pay, buy, refund\n")
         print("sum", vm.get_money())
 
         if cmd == "pay":
@@ -24,16 +26,21 @@ def main():
                 print("sum:", vm.get_money())
         elif cmd == "buy":
             # show available items
+            vm.show_items(vm.get_money())
+            #
             print("quit:q")
             itemID = input("itemID:")
             if itemID == "q":
                 continue
             if not vm.buy(itemID):
                 print("not enough money ")
+            print(vm.refund())
         elif cmd == "refund":
             print(vm.refund())
         elif cmd == "admin":
             # show all items
+            vm.show_items(showall=1)
+            #
             itemID = input("product itemID:")
             key = input("attribute of the product:")
             value = input("value of the attribute:")
